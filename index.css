@@ -1,0 +1,371 @@
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+
+/* 커스텀 라이브러리 */
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  --y-gap: 0px;
+  --x-gap: 0px;
+  --cc: 5;
+  gap: var(--y-gap) var(--x-gap);
+}
+.flex-grid > * {
+  width: calc(100% / var(--cc) - (var(--x-gap) * (var(--cc) - 1)) / var(--cc));
+}
+
+html > body {
+  background-image: url(https://blog.kakaocdn.net/dn/bNxgo5/btqUczAQzVO/ChFKdM39yRSpoAK4ct07VK/img.jpg);
+  background-size: cover;
+  background-position: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Readex Pro', sans-serif;
+  color: #fff;
+}
+.con {
+  width: 90%;
+}
+.con-min-width {
+  min-width: 90%;
+}
+
+/* 커스텀 */
+/* top-bar start */
+.top-bar {
+  width: 100%;
+  height: 100px;
+}
+.top-bar > * {
+  color: #fff;
+}
+.top-bar__menu > li:hover:not(:last-child) > a {
+  border-bottom: 2px solid blue;
+  box-sizing: border-box;
+}
+.top-bar__menu > li > a {
+  font-size: 1.1rem;
+  white-space: nowrap;
+} 
+.lang {
+  position: relative;
+}
+.lang-menu-wrap {
+  background-color: rgba(0,0,0,0);
+  position: absolute;
+  top: 0;
+  left: -20px;
+  padding-top: 130px;
+  display: none;
+}
+.lang-menu {
+  background-color: #fff;
+}
+.lang-menu * {
+  color: black;
+} 
+.lang:hover .lang-menu-wrap {
+  display: block;
+}
+.lang-menu > li:hover > a {
+  color: rgba(66, 137, 252);
+}
+
+
+/* main-1 start */
+.main-1 {
+  height: calc(100% - 100px);
+}
+.main-1 > .con {
+  position: relative;
+}
+.main-1__big-text {
+  position: absolute;
+  top: 30%;
+}
+.main-1__bottom-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.main-1__recent-news {
+  padding: 12px;
+  letter-spacing: 1px;
+  color: lightgray;
+  font-weight: bold;
+}
+.main-1__bottom-text > ul > li {
+  width: 300px;
+  height: 160px;
+  position: relative;
+}
+.main-1__bottom-text > ul > li > a {
+  padding: 12px;
+  font-weight: bold;
+  border-left: 1px solid #fff;
+}
+.main-1__bottom-text > ul > li::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 114, 235);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: -1;
+  transition: 0.4s;
+}
+.main-1__bottom-text > ul > li:hover::before {
+  top: 0;
+  left: 0;
+}
+
+/* main-2 start */
+.main-2 {
+  width: 100%;
+  height: 900px;
+  background-color: beige;
+  position: relative;
+}
+.main-2__img {
+  background-image: url(https://www.skyautonet.com/include/images/main/row2_img.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.main-2__text-box {
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-2__text-box > a {
+  white-space: nowrap;
+}
+.main-2__read-more {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  border: 1px solid rgba(50, 82, 168);
+  background-color: rgba(50, 82, 168,0);
+  transition: background-color 0.5s;
+}
+.main-2__read-more:hover {
+  background-color: rgba(50, 82, 168,0.5);
+}
+
+/* main-3 start */
+.main-3 {
+  background-color: #fff;
+  width: 100%;
+  height: 1000px;
+  color: black;
+}
+.main-3__wrap {
+  width: 1400px;
+  height: 100%;
+  position: relative;
+}
+.main-3__left-wrap > img {
+  position: absolute;
+  bottom: 80px;
+}
+.main-3__read-more {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+.main-3__right-wrap {
+  position: absolute;
+  top: 10%;
+  right: 0;
+}
+.main-3__right-wrap > .text {
+  font-size: 1.6rem;
+}
+.main-3__middle-text {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  font-size: 3.5rem;
+  background: linear-gradient(to right bottom, rgba(97, 108, 117), rgba(213, 220, 224));
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* main-4 start */
+.main-4 {
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(to right, rgba(97, 108, 117), rgba(213, 220, 224));
+}
+.main-4__wrap {
+  width: 1400px;
+  position: relative;
+}
+.main-4__wrap div {
+  position: absolute;
+}
+.main-4__wrap > div:nth-child(1) {
+  top: 20%;
+  font-size: 2.5rem;
+} 
+.main-4__wrap > div:nth-child(2) {
+  top: 40%;
+  left: 10%;
+  font-size: 2rem;
+} 
+
+
+/* main-5 start */
+.main-5 {
+  width: 100%;
+  height: 2700px;
+  background-color: #fff;
+}
+.main-5__wrap {
+  width: 1400px;
+  position: relative;
+}
+
+/* .main-5__left-box */
+.main-5__left-box {
+  width: 250px;
+  margin-top: 40px;
+  position: sticky;
+  top: 35%;
+}
+.main-5__left-box > .text-1 {
+  color: blue;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.main-5__left-box > .text-2 {
+  color: black;
+  margin-bottom: 30px;
+}
+.main-5__left-box > .see-more {
+  background-color: rgba(30, 72, 179);
+  padding: 20px 60px;
+  border-radius: 0 30px 0 0;
+}
+
+/* main-5__list-wrap */
+.main-5__list-wrap > ul > li:nth-child(1) {
+  position: relative;
+}
+.main-5__list-wrap > ul > li:nth-child(1) > .img {
+  width: 400px;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+} 
+.main-5__list-wrap > ul > li:nth-child(1)::before {
+  content: "SKYAUTONET";
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: rgba(30, 72, 179);
+  font-size: 0.8rem;
+}
+.main-5__list-wrap > ul > li:nth-child(2) {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.main-5__list-wrap > ul > li:nth-child(3) {
+  font-size: 0.9rem;
+  margin-top: 15px;
+  color: black;
+} 
+.main-5__list-wrap > ul > li:nth-child(4) {
+  font-size: 0.8rem;
+  margin-top: 15px;
+  color: gray;
+} 
+
+/* middle */
+.main-5__wrap > .middle {
+  position: absolute;
+  top: -150px;
+  left: 30%;
+}
+.middle__box-1 .box-1 {
+  background-image: url(https://www.skyautonet.com/include/app/data/board/newsroom/2021112614374828129_dd5402ea.png);
+}
+.middle__box-2 .box-2 {
+  background-image: url(https://www.skyautonet.com/include/app/data/board/newsroom/DTGEBACB4EC8381ECA090EAB280EC84BCED84B0EC9AB4EC9881_f9333f5b.jpeg);
+} 
+.middle__box-3 .box-3 {
+  background-image: url(https://www.skyautonet.com/include/app/data/board/newsroom/2020102907104771119_160392304728129_24bceed5.jpg);
+} 
+.middle__box-4 .box-4 {
+  background-image: url(https://www.skyautonet.com/include/app/data/board/newsroom/image_readtop_2019_733631_15686229343901960_35a4be62.jpg);
+}
+
+/* right */
+.main-5__wrap > .right {
+  position: absolute;
+  top: -250px;
+  right: 0;
+}
+.right__box-1 .box-1 {
+  background-image: url(https://www.skyautonet.com/include/app/data/board/newsroom/20211123101556_ddb9762c.png);
+}
+.right__box-2 .box-2 {
+  background-image: url(https://www.skyautonet.com/include/app/data/board/newsroom/EC9E90EC9CA8ECA3BCED9689-ECB2ADEC868CECB0A8_f752c962.jpg);
+}
+.right__box-3 .box-3 {
+  background-image: url(https://www.skyautonet.com/include/app/data/board/newsroom/EAB7B8EBA6BC1_078a4453.jpg);
+}
+.right__box-4 .box-4 {
+  background-image: url(https://www.skyautonet.com/include/app/data/board/newsroom/20190603131224_4763_4053f2b3.jpg);
+}
+
+
+/* footer start */
+.footer {
+  width: 100%;
+  height: 300px;
+  background-image: url(https://www.skyautonet.com/include/images/common/footer_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.footer__wrap {
+  width: 1400px;
+  height: 100%;
+  padding-top: 50px;
+}
+.footer__wrap > .logo {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+.footer__inner > .address, .menu, .tel-fax-email, .copy-right {
+  font-size: 0.9rem;
+}
+.footer__inner > .menu > li:not(:last-child) {
+  margin-right: 25px;
+} 
+.tel-fax-email {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.copy-right {
+  padding-top: 30px;
+  border-top: 1px solid white;
+  color: gray;
+}
